@@ -1,19 +1,16 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
-  const [Data, setData] = useState({user:"Ejaz",age:20})
+  const[Data,SetData] = useState({name:"Ejaz",age:20})
 
-  function btnClicked(){
-    const Newuser = {...Data}
-    Newuser.user='bhaskar'
-    setData(Newuser )
-    
+  const update = () =>{
+    SetData((prev)=>({...prev,age:"50"}))
+    console.log(SetData);
   }
   return (
     <div>
-      <button onClick={btnClicked}>click</button>
-      <p>{Data.user}{Data.age}</p>
+      {Data.name}{Data.age}
+      <button onClick={update}>click</button>
     </div>
   )
 }
