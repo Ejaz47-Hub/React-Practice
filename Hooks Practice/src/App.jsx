@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Form from './Form'
+import TowWayBinding from './TowWayBinding'
 
 const App = () => {
   const[Data,SetData] = useState({name:"Ejaz",age:20})
@@ -11,6 +13,8 @@ const App = () => {
     <div>
       {Data.name}{Data.age}
       <button onClick={update}>click</button>
+      <Form/>
+      <TowWayBinding/>
     </div>
   )
 }
