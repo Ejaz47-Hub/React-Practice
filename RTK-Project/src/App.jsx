@@ -8,9 +8,9 @@ const App = () => {
         console.log(raj.results);
         
       }}>Get Photos</button>
-
+      
       <button onClick={async()=>{const raj = await GetVideos('cat')
-        console.log(raj.videos);
+        console.log(raj.videos); 
         
       }}>Get Videos</button>
 
